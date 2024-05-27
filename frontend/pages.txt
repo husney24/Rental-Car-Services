@@ -1,0 +1,24 @@
+Admin Login
+Dashboard-> Driver, Bookings, Upcoming, Previous and Cancelled Bookings, Earnings, Vehicles
+	-> Graph (Pie Chart: For Vehicle by car type) and Line graph for earnings
+
+	
+Bookings
+	-> Upcoming, Current(optional), Previous
+	-> List with details page (Booking Info, Customer Info, Driver Info, Payment Info, Car Info)
+Vehicle, Vehicle Type, Drivers
+
+Driver Login
+Dashboard
+	-> Upcoming, Previous and Cancelled Bookings, Earnings
+	-> Line graph for earnings
+Bookings
+	-> Upcoming, Current(optional), Previous
+	-> List with details page (Booking Info, Customer Info, Driver Info, Payment Info, Car Info)
+Driver info, Vehicle (Read, Update)
+
+User 
+	-> Add Booking,
+	-> CRUD for User
+	-> Check Previous and upcoming bookings (Booking History)
+	-> Cancel Booking

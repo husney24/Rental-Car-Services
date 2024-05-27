@@ -1,0 +1,631 @@
+{
+	"info": {
+		"_postman_id": "a95d0051-84f2-4d82-846b-06c9f2879d32",
+		"name": "Rental Car Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29460609"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Vehicle",
+					"item": [
+						{
+							"name": "Add Vehicle",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFqZGVlcCBEdXR0YSIsInJvbGUiOjMsImlhdCI6MTcwNTI0MDUyM30.qwpzfiA_XgZRovAxkqoUdMvn_hEmlESVd4MJ4ocvYfs",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "car_image",
+											"type": "file",
+											"src": [
+												"/C:/Users/rajdeep/Downloads/i7-right-front-three-quarter-2.webp",
+												"/C:/Users/rajdeep/Downloads/39821d9a-325b-4c8b-8a7e-f53d6e5df2cb_payment_confirmation_20240240-115442.png"
+											]
+										},
+										{
+											"key": "model",
+											"value": "BMW_X1",
+											"type": "text"
+										},
+										{
+											"key": "license_no",
+											"value": "WB0420240012024",
+											"type": "text"
+										},
+										{
+											"key": "capacity",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "premium",
+											"type": "text"
+										},
+										{
+											"key": "color",
+											"value": "Blue",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/admin/addVehicle",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"addVehicle"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Vehicle",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFqZGVlcCBEdXR0YSIsInJvbGUiOjMsImlhdCI6MTcwNTY0NzU5M30.f8ZawecBovg2rehNI1mZz5JBLhtuQwP-o3ZKKc1rABg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "car_image",
+											"type": "file",
+											"src": [
+												"/C:/Users/rajdeep/Downloads/bmw-3-series-sedan-lci-modelfinder.png",
+												"/C:/Users/rajdeep/Downloads/i7-right-front-three-quarter-2.webp"
+											]
+										},
+										{
+											"key": "color",
+											"value": "blue",
+											"type": "text"
+										},
+										{
+											"key": "capacity",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "SUV",
+											"type": "text"
+										},
+										{
+											"key": "fare",
+											"value": "40",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/admin/updateVehicle/19",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"updateVehicle",
+										"19"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Vehicle",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFqZGVlcCBEdXR0YSIsInJvbGUiOjMsImlhdCI6MTcwNTY0NzU5M30.f8ZawecBovg2rehNI1mZz5JBLhtuQwP-o3ZKKc1rABg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/admin/deleteVehicle/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"deleteVehicle",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Vehicle",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFqZGVlcCBEdXR0YSIsInJvbGUiOjMsImlhdCI6MTcwNTc2MjgyM30.mCQOBrLgBusHfB6IirIarN9czLSiYaAmVoCg4CIWM6I",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/admin/getAllVehicle",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"getAllVehicle"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Driver",
+					"item": [
+						{
+							"name": "Driver Registration",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFqZGVlcCBEdXR0YSIsInJvbGUiOjMsImlhdCI6MTcwNTY3MTIxMH0.QRg9rTz10p2k9yzdWn_Z9PXBwTtyKWvmHFnW9pxFVxY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Ryan McLaren\",\r\n    \"email\":\"ryanmclaren@driver.com\",\r\n    \"phone\":\"1231231234\",\r\n    \"password\":\"ryanmclaren\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/admin/driverRegistration",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"driverRegistration"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Driver List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFqZGVlcCBEdXR0YSIsInJvbGUiOjMsImlhdCI6MTcwNjAyMzM0Nn0.RDynIe9MNJ-LwFgzv5llaGTfbBrf4gXhrYiKGsw2RhY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/admin/driverList",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"driverList"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Driver",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFqZGVlcCBEdXR0YSIsInJvbGUiOjMsImlhdCI6MTcwNjAyNDUwOX0.3w2xMXpZnPVEM1j35gfGro5EK17wlEdM0Z-Q2Q0lXS0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"ryanmclaren17@driver.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/admin/updateDriver/14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"updateDriver",
+										"14"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Driver",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFqZGVlcCBEdXR0YSIsInJvbGUiOjMsImlhdCI6MTcwNjAyNDUwOX0.3w2xMXpZnPVEM1j35gfGro5EK17wlEdM0Z-Q2Q0lXS0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/admin/deleteDriver/14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"deleteDriver",
+										"14"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "All users",
+			"item": [
+				{
+					"name": "Login",
+					"item": [
+						{
+							"name": "Admin Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Rajdeep Dutta\",\r\n    \"phone\":\"9836952191\",\r\n    \"email\":\"rajdeep1710@gmail.com\",\r\n    \"password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/login/admin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"login",
+										"admin"
+									],
+									"query": [
+										{
+											"key": "cityName",
+											"value": "Pune",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Driver Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Lewis Hamilton\",\r\n    \"phone\":\"2122132142\",\r\n    \"email\":\"lewishamilton@gmail.com\",\r\n    \"password\":\"lewishamilton\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/login/driver",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"login",
+										"driver"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Rajdeep Dutta\",\r\n    \"phone\":\"9163426071\",\r\n    \"email\":\"dutta10rajdeep@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/login/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"login",
+										"user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"John Cena\",\r\n    \"phone\":\"5121341341\",\r\n    \"email\":\"johncena@wwe.com\",\r\n    \"password\":\"johncena\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Vehicle",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFqZGVlcCBEdXR0YSIsInJvbGUiOjEsImlhdCI6MTcwNTc2MjQ2OH0.RFWaIBOXPESZ12J2h_J-IMZxPzTrFHEj1F-081Kszy4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/getAllVehicle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"getAllVehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Total Fare",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFqZGVlcCBEdXR0YSIsInJvbGUiOjEsImlhdCI6MTcwNzY2Mzc4OX0.AlTX-q09xTyF8-43CPoP9NbVl38_Dz9Avn9mKU9KtB8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\":\"SUV\",\r\n    \"distance\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/fareCalculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"fareCalculate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Car Booking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFqZGVlcCBEdXR0YSIsInJvbGUiOjEsImlkIjo1LCJpYXQiOjE3MDc2Njc3MjJ9.Lg1TMyih44hZYHjoxsZQ8eo-GWBPNQ-7Rjm2zAe0jIw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pickUp\":\"Kolkata\",\r\n    \"dropOff\":\"Odisha\",\r\n    \"distance\":653,\r\n    \"type\":\"SUV\",\r\n    \"bookingDate\":\"11-02-2024 10:00\",\r\n    \"person\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/booking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Driver",
+			"item": [
+				{
+					"name": "Get All Vehicle",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTGV3aXMgSGFtaWx0b24iLCJyb2xlIjoyLCJpYXQiOjE3MDU3NjI2ODZ9.1hEABxndo3oXd7PV7V6e3cmwDBvm7_0GpB6TE0Pn96Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/driver/getAllVehicle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"driver",
+								"getAllVehicle"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
