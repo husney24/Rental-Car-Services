@@ -1,5 +1,3 @@
-Rental Cab Service - Where You Can Book Cars for Schedule, and Also Drivers Can Register with Car and License
-
 # Rental Cab Service
 
 Welcome to the Rental Cab Service project! This repository contains the code for a complete car rental service, featuring a React frontend and a Node.js backend with a MySQL database.
